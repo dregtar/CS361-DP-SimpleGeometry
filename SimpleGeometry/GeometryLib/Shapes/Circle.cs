@@ -23,8 +23,14 @@ namespace GeometryLib.Shapes
         {
             double area = 0;
 
-            area = this.Radius * this.Radius * Math.PI;
+            area = Area();
             return string.Format("Circle: radius = {0}, area = {1}", this.Radius, area);
+        }
+        public override double Area()
+        {
+            double area = 0;
+            area = this.Radius * this.Radius * Math.PI;
+            return area;
         }
     }
 }

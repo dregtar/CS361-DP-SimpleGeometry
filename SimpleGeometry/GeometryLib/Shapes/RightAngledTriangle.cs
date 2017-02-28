@@ -20,8 +20,16 @@ namespace GeometryLib.Shapes
         {
             double area = 0;
 
-            area = 0.5 * this.Side1 * this.Side2;
+            area = Area();
             return string.Format("Right-angled Triangle: sides: {0}, {1}, {2}, area = {3}", this.Side1, this.Side2, this.Side3, area);
+        }
+        public override double Area()
+        {
+            double area = 0;
+
+            area = 0.5 * this.Side1 * this.Side2;
+            return area;
+
         }
     }
 }

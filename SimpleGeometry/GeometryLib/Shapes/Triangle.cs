@@ -30,12 +30,19 @@ namespace GeometryLib.Shapes
         {
             double area = 0;
 
+            area = Area();
+            return string.Format("Triangle sides: {0}, {1}, {2}, area = {3}", this.Side1, this.Side2, this.Side3, area);
+        }
+        public override double Area()
+        {
+            double area = 0;
             var side1 = this.Side1;
             var side2 = this.Side2;
             var side3 = this.Side3;
             var p = (side1 + side2 + side3) / 2;
             area = Math.Sqrt(p * (p - side1) * (p - side2) * (p - side3));
-            return string.Format("Triangle sides: {0}, {1}, {2}, area = {3}", side1, side2, side3, area);
+
+            return area;
         }
     }
 }
