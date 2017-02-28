@@ -19,5 +19,12 @@ namespace GeometryLib.Shapes
             Debug.Assert(radius > 0, "radius > 0");
             Radius = radius;
         }
+        public override string Print()
+        {
+            double area = 0;
+
+            area = this.Radius * this.Radius * Math.PI;
+            return string.Format("Circle: radius = {0}, area = {1}", this.Radius, area);
+        }
     }
 }

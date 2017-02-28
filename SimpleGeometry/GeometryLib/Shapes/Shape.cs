@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace GeometryLib.Shapes
 {
+    public interface IPrintable
+    {
+        string Print();
+    }
     /// <summary>
     /// Абстрактный класс формы
     /// </summary>
-    public abstract class Shape
+    public abstract class Shape : IPrintable
     {
+        public abstract string Print();
     }
 }
