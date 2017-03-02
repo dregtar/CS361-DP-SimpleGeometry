@@ -12,7 +12,7 @@ namespace GeometryLib.Shapes
     /// </summary>
     public class Circle : Shape
     {
-        public double Radius { get; }
+        public double Radius { get; set; }
 
         public Circle(double radius)
         {
